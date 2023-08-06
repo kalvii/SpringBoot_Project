@@ -52,9 +52,10 @@ public class cgcController {
 	}
 	
 	@DeleteMapping("/deletes")
-	public void deletedata()
+	public String deletedata()
 	{
 		repos.deleteAll();
+		return "Succesfully deleted";
 	}
 	@DeleteMapping("/deletebyid/{id}")
 	public void deletedatabyid(@PathVariable Integer id)
