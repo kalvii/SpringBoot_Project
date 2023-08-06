@@ -58,9 +58,10 @@ public class cgcController {
 		return "Succesfully deleted";
 	}
 	@DeleteMapping("/deletebyid/{id}")
-	public void deletedatabyid(@PathVariable Integer id)
+	public String  deletedatabyid(@PathVariable Integer id)
 	{
 		repos.deleteById(id);
+		return "deleted the spefic id";
 	}
 	
 	
